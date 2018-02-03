@@ -1,0 +1,26 @@
+{
+  "name": "daysplash",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "TiagoDanin"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "unsplash",
+    "wallpaper"
+  ],
+  "homepage": "https://github.com/TiagoDanin/DaySplash",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "onsenui": "2.9.1",
+    "jquery": "3.3.1"
+  }
+}
