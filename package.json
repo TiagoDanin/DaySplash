@@ -1,0 +1,35 @@
+{
+  "name": "daysplash",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Nice test :)'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TiagoDanin/DaySplash.git"
+  },
+  "keywords": [
+    "unsplash",
+    "wallpaper"
+  ],
+  "author": "TiagoDanin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TiagoDanin/DaySplash/issues"
+  },
+  "homepage": "https://github.com/TiagoDanin/DaySplash#readme",
+  "dependencies": {
+    "electron": "1.7.12",
+    "jquery": "3.3.1",
+    "request": "2.83.0",
+    "request-promise-native": "1.0.5",
+    "unsplash-source-node": "1.0.0",
+    "wallpaper": "2.6.0"
+  },
+  "devDependencies": {
+    "cross-env": "5.1.3",
+    "env-cmd": "7.0.0"
+  }
+}
