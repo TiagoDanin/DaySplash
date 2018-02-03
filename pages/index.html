@@ -1,9 +1,27 @@
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
+	<meta charset="utf-8">
+	<title>DaySplash</title>
+	<link rel="stylesheet" href="../bower_components/onsenui/css/onsenui.min.css">
+	<link rel="stylesheet" href="../bower_components/onsenui/css/dark-onsen-css-components.min.css">
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="../bower_components/onsenui/js/onsenui.min.js"></script>
 </head>
 
 <body>
+	<ons-page>
+		<ons-tabbar swipeable position="auto">
+			<ons-tab page="wallpapers.html" label="Wallpapers" icon="ion-image" active>
+			</ons-tab>
+			<ons-tab page="setting.html" label="Setting" icon="ion-gear-b">
+			</ons-tab>
+		</ons-tabbar>
+	</ons-page>
+	<script>
+		require('../app')
+	</script>
 </body>
 
 </html>
