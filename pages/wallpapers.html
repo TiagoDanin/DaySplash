@@ -1,6 +1,19 @@
 <ons-page id="wallpaper">
+
 	<ons-toolbar>
-		<div class="center">Wallpapers</div>
+		<div class="center ">
+			<ons-segment id="segment" active-index="4" style="width: 380px">
+			<ons-button  id="wallpaper_set">
+				<i class="ion-wand" style="font-size:17px"></i> Set Wallpaper
+			</ons-button>
+			<ons-button  id="wallpaper_download">
+				<i class="ion-ios-cloud-download" style="font-size:17px"></i> Download
+			</ons-button>
+			<ons-button  id="wallpaper_reload">
+				<i class="ion-ios-cloud-download" style="font-size:17px"></i> Reload
+			</ons-button>
+			</ons-segment>
+		</div>
 	</ons-toolbar>
 	<p style="text-align: center;" id="wallpapers_cards">
 	</p>
