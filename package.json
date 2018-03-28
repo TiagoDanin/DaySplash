@@ -35,6 +35,6 @@
   "devDependencies": {
     "cross-env": "5.1.4",
     "env-cmd": "7.0.0",
-    "bower": "1.8.3"
+    "bower": "1.8.4"
   }
 }
