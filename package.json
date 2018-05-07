@@ -30,7 +30,7 @@
     "request-promise-native": "1.0.5",
     "resolutiondppx": "0.0.4",
     "unsplash-source-node": "^1.0.0",
-    "wallpaper": "2.6.0"
+    "wallpaper": "3.0.0"
   },
   "devDependencies": {
     "cross-env": "5.1.4",
