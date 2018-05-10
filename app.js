@@ -5,6 +5,9 @@ const request = require('request-promise-native')
 const {
 	dialog
 } = require('electron').remote
+const wallpaper = require('wallpaper')
+const tmpdir = require('os-tmpdir')
+
 
 function editSelects(event) {
 	document.getElementById('choose-sel').removeAttribute('modifier')
@@ -26,7 +29,21 @@ function notification(text) {
 }
 
 function wallpaperSet(img) {
-
+	var content = img.base
+	var ext = (img.type).replace('image/', '')
+	var filePath = `${tmpdir()}/DaySplash.${ext}`
+	console.log(filePath)
+	console.log('111')
+	fs.writeFile(filePath, content, (err) => {
+		console.log(err)
+		if (!err) {
+			console.log('222')
+			wallpaper.set(filePath).then(() => {
+				console.log('33')
+				notification('OK Set')
+			})
+		}
+	})
 }
 
 function wallpaperDownload(img) {
@@ -37,10 +54,13 @@ function wallpaperDownload(img) {
 		title: 'Download Wallpaper',
 		defaultPath: fileName
 	}, function (filePath) {
-		fs.writeFile(filePath, content, (err) => {
-			if (!err) {
-			}
-		})
+		if (filePath) {
+			fs.writeFile(filePath, content, (err) => {
+				if (!err) {
+					notification('OK Download')
+				}
+			})
+		}
 	})
 }
 
