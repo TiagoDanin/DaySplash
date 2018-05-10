@@ -2,9 +2,7 @@ const fs = require('fs')
 const format = require('jformat')
 const unsplash = require('unsplash-source-node')
 const request = require('request-promise-native')
-const {
-	dialog
-} = require('electron').remote
+const {dialog} = require('electron').remote
 const wallpaper = require('wallpaper')
 const tmpdir = require('os-tmpdir')
 
