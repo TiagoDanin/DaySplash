@@ -26,7 +26,7 @@
     "get-res": "3.0.0",
     "jformat": "1.0.4",
     "remove": "0.1.5",
-    "request": "2.86.0",
+    "request": "2.87.0",
     "request-promise-native": "1.0.5",
     "resolutiondppx": "0.0.4",
     "unsplash-source-node": "1.0.0",
