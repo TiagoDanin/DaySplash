@@ -33,7 +33,7 @@
     "wallpaper": "3.0.0"
   },
   "devDependencies": {
-    "cross-env": "5.1.6",
+    "cross-env": "5.2.0",
     "env-cmd": "8.0.2",
     "bower": "1.8.4"
   }
