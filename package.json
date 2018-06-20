@@ -30,7 +30,7 @@
     "os-tmpdir": "1.0.2",
     "request-promise-native": "1.0.5",
     "resolutiondppx": "0.0.4",
-    "unsplash-source-node": "1.0.0",
+    "unsplash-source-node": "1.0.1",
     "wallpaper": "3.0.0",
     "graceful-fs": "4.1.6",
     "jsonfile": "4.0.0"
