@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo 'Nice test :)'",
-    "electron": "./node_modules/electron/cli.js ."
+    "start": "./node_modules/electron/cli.js ."
   },
   "repository": {
     "type": "git",
@@ -22,18 +22,22 @@
   },
   "homepage": "https://github.com/TiagoDanin/DaySplash#readme",
   "dependencies": {
-    "electron": "2.0.0",
+    "electron": "2.0.2",
     "get-res": "3.0.0",
     "jformat": "1.0.4",
     "remove": "0.1.5",
-    "request": "2.85.0",
+    "request": "2.87.0",
+    "os-tmpdir": "1.0.2",
     "request-promise-native": "1.0.5",
     "resolutiondppx": "0.0.4",
     "unsplash-source-node": "1.0.0",
-    "wallpaper": "3.0.0"
+    "wallpaper": "3.0.0",
+    "graceful-fs": "4.1.6",
+    "jsonfile": "4.0.0"
   },
   "devDependencies": {
-    "env-cmd": "8.0.1",
+    "cross-env": "5.2.0",
+    "env-cmd": "8.0.2",
     "bower": "1.8.4"
   }
 }

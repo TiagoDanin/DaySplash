@@ -2,12 +2,18 @@
 	<ons-toolbar>
 		<div class="center">Setting</div>
 	</ons-toolbar>
-	<ons-input id="tags" modifier="underbar" placeholder="Tag1, Tag2, Tag3" float></ons-input>
-	<div class="center">
-		<ons-select id="choose-sel" onchange="editSelects(event)">
-			<option value="basic">Basic</option>
-			<option value="material">Material</option>
-			<option value="underbar">Underbar</option>
-		</ons-select>
-	</div>
+	<ons-card>
+		<div class="title"></div>
+		<div class="content">
+			<ons-list>
+				<ons-list-header>Category</ons-list-header>
+				<ons-list-item><ons-input id="tags" modifier="underbar" placeholder="Tag1,Tag2,Tag3" float></ons-input></ons-list-item>
+				<ons-list-header>Screen Size</ons-list-header>
+				<ons-list-item>Width:<ons-input id="width" modifier="underbar" placeholder="1366" float></ons-input></ons-list-item>
+				<ons-list-item>Height:<ons-input id="height" modifier="underbar" placeholder="768" float></ons-input></ons-list-item>
+				<ons-list-header></ons-list-header>
+				<ons-button id="setting_set">Save</ons-button>
+			</ons-list>
+		</div>
+	</ons-card>
 </ons-page>

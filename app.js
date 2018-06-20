@@ -2,9 +2,13 @@ const fs = require('fs')
 const format = require('jformat')
 const unsplash = require('unsplash-source-node')
 const request = require('request-promise-native')
-const {dialog} = require('electron').remote
+const {dialog, session} = require('electron').remote
 const wallpaper = require('wallpaper')
 const tmpdir = require('os-tmpdir')
+const jsonfile = require('jsonfile')
+
+const fileConfig = `config.json`
+var config = jsonfile.readFileSync(fileConfig)
 
 
 function editSelects(event) {
@@ -19,6 +23,8 @@ document.addEventListener('init', function(event) {
 	console.log(page)
 	if (page.matches('#wallpaper')) {
 		loadWallpaper(page)
+	} else if (page.matches('#setting')) {
+		loadSetting(page)
 	}
 })
 
@@ -30,15 +36,10 @@ function wallpaperSet(img) {
 	var content = img.base
 	var ext = (img.type).replace('image/', '')
 	var filePath = `${tmpdir()}/DaySplash.${ext}`
-	console.log(filePath)
-	console.log('111')
 	fs.writeFile(filePath, content, (err) => {
-		console.log(err)
 		if (!err) {
-			console.log('222')
 			wallpaper.set(filePath).then(() => {
-				console.log('33')
-				notification('OK Set')
+				notification('Successfully!')
 			})
 		}
 	})
@@ -55,7 +56,7 @@ function wallpaperDownload(img) {
 		if (filePath) {
 			fs.writeFile(filePath, content, (err) => {
 				if (!err) {
-					notification('OK Download')
+					notification('Donwload successfully!')
 				}
 			})
 		}
@@ -63,6 +64,7 @@ function wallpaperDownload(img) {
 }
 
 async function getIMG(url) {
+	console.log(url)
 	var data = await request({
 		uri: url,
 		encoding: null,
@@ -93,9 +95,9 @@ async function loadWallpaper(page) {
 		loadWallpaper(page)
 	}
 	var img = await getIMG(unsplash({
-		random: true,
-		width: 120, //1366,
-		height: 80 // 768
+		search: config.tags,
+		width: config.width,
+		height: config.height
 	}))
 	page.querySelector(`#wallpaper_set`).onclick = function() {
 		wallpaperSet(img)
@@ -109,4 +111,21 @@ async function loadWallpaper(page) {
 		img: img.base64
 	})
 	page.querySelector('#wallpapers_cards').innerHTML = html
+}
+
+async function loadSetting(page) {
+	page.querySelector(`#setting_set`).onclick = function() {
+		config.width  = document.getElementById('width').value  || config.width  || '1366'
+		config.height = document.getElementById('height').value || config.height || '768'
+		config.tags   = document.getElementById('tags').value   || config.tags   || 'Blur'
+		console.log(config)
+		jsonfile.writeFileSync(
+			fileConfig,
+			config,
+			{
+				replacer: true
+			}
+		)
+		notification('Successfully!')
+	}
 }

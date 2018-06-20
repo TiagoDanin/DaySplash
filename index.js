@@ -10,12 +10,21 @@ const devMode = process.env.dev_mode
 let mainWindow
 
 function createWindow () {
-	mainWindow = new BrowserWindow({width: 460, height: 600})
-	mainWindow.loadURL(url.format({
-		pathname: path.join(__dirname, 'pages/index.html'),
-		protocol: 'file:',
-		slashes: true
-	}))
+	mainWindow = new BrowserWindow({
+		webPreferences: {
+			//nodeIntegration: false,
+			webSecurity: false
+		},
+		width: 460,
+		height: 600
+	})
+	mainWindow.loadURL(
+		url.format({
+			pathname: path.join(__dirname, 'pages/index.html'),
+			protocol: 'file:',
+			slashes: true
+		})
+	)
 
 	if (devMode) {
 		mainWindow.webContents.openDevTools()
