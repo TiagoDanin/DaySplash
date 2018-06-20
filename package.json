@@ -1,7 +1,7 @@
 {
   "name": "daysplash",
   "version": "1.0.0",
-  "description": "",
+  "description": "My app of wallpapers, using Electron!",
   "main": "index.js",
   "scripts": {
     "test": "echo 'Nice test :)'",
