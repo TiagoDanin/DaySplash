@@ -29,7 +29,7 @@
     "request": "2.87.0",
     "request-promise-native": "1.0.5",
     "resolutiondppx": "0.0.4",
-    "unsplash-source-node": "1.0.0",
+    "unsplash-source-node": "1.0.1",
     "wallpaper": "3.0.0"
   },
   "devDependencies": {
