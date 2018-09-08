@@ -33,7 +33,7 @@
     "unsplash-source-node": "1.0.1",
     "wallpaper": "3.0.0",
     "graceful-fs": "4.1.6",
-    "jsonfile": "4.0.0"
+    "jsonfile": "5.0.0"
   },
   "devDependencies": {
     "cross-env": "5.2.0",
