@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo 'Nice test :)'",
-    "start": "./node_modules/electron/cli.js ."
+    "start": "./node_modules/electron/cli.js .",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,7 @@
   },
   "homepage": "https://github.com/TiagoDanin/DaySplash#readme",
   "dependencies": {
-    "electron": "2.0.2",
+    "electron": "2.0.8",
     "get-res": "3.0.0",
     "jformat": "1.0.4",
     "remove": "0.1.5",
@@ -33,11 +35,13 @@
     "unsplash-source-node": "1.0.1",
     "wallpaper": "3.0.0",
     "graceful-fs": "4.1.6",
-    "jsonfile": "5.0.0"
+    "jsonfile": "5.0.0",
+    "snyk": "^1.96.0"
   },
   "devDependencies": {
     "cross-env": "5.2.0",
     "env-cmd": "8.0.2",
     "bower": "1.8.4"
-  }
+  },
+  "snyk": true
 }
