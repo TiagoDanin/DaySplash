@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/TiagoDanin/DaySplash#readme",
   "dependencies": {
-    "electron": "2.0.2",
+    "electron": "2.0.10",
     "get-res": "3.0.0",
     "jformat": "1.0.4",
     "remove": "0.1.5",
