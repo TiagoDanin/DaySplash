@@ -33,7 +33,7 @@
     "request-promise-native": "1.0.5",
     "resolutiondppx": "0.0.4",
     "unsplash-source-node": "1.0.1",
-    "wallpaper": "3.0.0",
+    "wallpaper": "4.1.0",
     "graceful-fs": "4.1.11",
     "jsonfile": "5.0.0",
     "snyk": "1.103.2"
