@@ -34,7 +34,7 @@
     "resolutiondppx": "0.0.4",
     "unsplash-source-node": "1.2.0",
     "wallpaper": "4.1.0",
-    "graceful-fs": "4.1.11",
+    "graceful-fs": "4.1.15",
     "jsonfile": "5.0.0",
     "snyk": "1.106.1"
   },
