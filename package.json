@@ -40,7 +40,7 @@
 	},
 	"devDependencies": {
 		"cross-env": "^5.2.0",
-		"env-cmd": "^9.0.1",
+		"env-cmd": "^9.0.3",
 		"bower": "1.8.7"
 	},
 	"snyk": true
