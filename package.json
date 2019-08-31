@@ -39,7 +39,7 @@
 		"snyk": "1.120.0"
 	},
 	"devDependencies": {
-		"cross-env": "^5.2.0",
+		"cross-env": "^5.2.1",
 		"env-cmd": "^9.0.1",
 		"bower": "1.8.8"
 	},
