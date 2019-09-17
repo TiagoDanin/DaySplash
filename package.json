@@ -36,7 +36,7 @@
 		"wallpaper": "4.4.1",
 		"graceful-fs": "4.2.2",
 		"jsonfile": "5.0.0",
-		"snyk": "1.120.0"
+		"snyk": "1.228.0"
 	},
 	"devDependencies": {
 		"cross-env": "^5.2.0",
