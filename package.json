@@ -6,8 +6,6 @@
 	"scripts": {
 		"test": "echo 'Nice test :)'",
 		"start": "./node_modules/electron/cli.js .",
-		"snyk-protect": "snyk protect",
-		"prepare": "npm run snyk-protect"
 	},
 	"repository": {
 		"type": "git",
@@ -36,12 +34,10 @@
 		"wallpaper": "4.4.1",
 		"graceful-fs": "4.2.2",
 		"jsonfile": "5.0.0",
-		"snyk": "1.228.0"
 	},
 	"devDependencies": {
 		"cross-env": "^6.0.3",
 		"env-cmd": "^9.0.1",
 		"bower": "1.8.8"
 	},
-	"snyk": true
 }
